@@ -1,6 +1,6 @@
 'use strict';
 
-const POSTGRES_URI = "postgres://postgres@localhost:5432/postgres";
+const POSTGRES_URI =process.env.POSTGRES_URI || "postgres://postgres@localhost:5432/postgres";
 const { Sequelize, DataTypes } = require('sequelize');
 const clothes = require('./clothes');
 const food = require('./food');
