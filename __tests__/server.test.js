@@ -48,6 +48,19 @@ describe('express server',()=>{
 
     });
 
+    test('should check getAll food' ,async()=>{
+        //arrange
+        let param='/food';
+        let status = 200;
+        
+        //act
+        const response = await request.get(param);
+        //assert
+        expect(response.status).toBe(status);
+        
+
+    });
+
     
     it('200 get', async () => {
         const response = await request.get('/food'); 
